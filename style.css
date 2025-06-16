@@ -9,32 +9,98 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background: #1e1e2f;
   color: #fff;
+  padding: 20px;
+  min-height: 100vh;
 }
 
 .container {
   text-align: center;
+  max-width: 900px;
+  width: 100%;
 }
 
 h1 {
   margin-bottom: 20px;
 }
 
+/* Controls Layout */
+.controls {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Buttons - Glassmorphism Style */
+.controls button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Input Fields - Glassmorphism Style */
+.controls input[type="date"],
+.controls input[type="number"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.controls input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.controls input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Palette Colors */
 .palette {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .color-box {
   flex: 1;
+  min-width: 100px;
   height: 100px;
   border-radius: 8px;
   cursor: pointer;
   position: relative;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .color-box:hover {
@@ -46,14 +112,48 @@ h1 {
   bottom: 5px;
   left: 0;
   right: 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #fff;
   background: rgba(0, 0, 0, 0.4);
   padding: 2px;
   border-radius: 0 0 8px 8px;
 }
 
-.date-info {
+/* Info */
+.date-info,
+.palette-name {
   font-size: 0.85rem;
-  opacity: 0.8;
+  margin-bottom: 10px;
+  opacity: 0.9;
 }
+
+/* Favorite Palettes */
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.favorite {
+  display: flex;
+  gap: 2px;
+}
+
+.favorite div {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .palette {
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
+

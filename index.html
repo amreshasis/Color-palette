@@ -9,9 +9,26 @@
 <body>
   <div class="container">
     <h1>🎨 Daily Color Palette</h1>
+
+    <div class="controls">
+      <input type="date" id="datePicker" />
+      <input type="number" id="colorCount" min="1" max="10" value="5" />
+      <button id="saveBtn">❤️ Save</button>
+      <button id="shareBtn">🔗 Share</button>
+      <button id="downloadImgBtn">⬇️ Image</button>
+      <button id="downloadJsonBtn">⬇️ JSON</button>
+      <button id="downloadCssBtn">⬇️ CSS</button>
+      <button id="downloadSvgBtn">⬇️ SVG</button>
+    </div>
+
     <div id="palette" class="palette"></div>
     <p class="date-info" id="date-info"></p>
+    <p class="palette-name" id="palette-name"></p>
+
+    <h2>⭐ Favorite Palettes</h2>
+    <div id="favorites" class="favorites"></div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
