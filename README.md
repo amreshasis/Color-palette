@@ -1,4 +1,4 @@
-# 🎨 Daily Color Palette
+# 🎨 Daily Colour Palette
 
 A stylish, modern web app that generates a unique color palette every day (or for any date you choose). Users can interact with, customize, download, and share palettes, with accessibility features and glassmorphism UI built in.
 
