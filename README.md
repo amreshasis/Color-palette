@@ -1,6 +1,8 @@
-# 🎨 Daily Color Palette
+# 🎨 Daily Colour Palette
 
 A stylish, modern web app that generates a unique color palette every day (or for any date you choose). Users can interact with, customize, download, and share palettes, with accessibility features and glassmorphism UI built in.
+
+See the magic- https://daily-color-palette.netlify.app/
 
 ![color palette](https://github.com/user-attachments/assets/a1807698-123d-438a-b4ac-df4cd1e4a293)
 
